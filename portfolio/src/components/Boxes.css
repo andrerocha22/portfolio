@@ -1,13 +1,26 @@
-.box{
-    height: 250px;
-    width: 350px;
-    background-color: rgb(255, 255, 255);
-    padding: 20px;
-    box-shadow: 0 0 20px #00000099;
+@media (min-width: 0px) and (max-width: 767.98px)  {
+    .box {
+        height: auto;
+        width: auto;
+        background-color: rgb(255, 255, 255);
+        padding: 20px;
+        box-shadow: 0 0 20px #ebebeb99;
+    }
 }
 
-.text_style{
+@media (min-width: 767.98px) and (max-width: 3200px) {
+    .box {
+        height: 250px;
+        width: auto;
+        background-color: rgb(255, 255, 255);
+        padding: 20px;
+        box-shadow: 0 0 20px #ebebeb99;
+    }
+}
+
+.text_style {
     text-align: justify;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
     text-indent: 25px;
 }

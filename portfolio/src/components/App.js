@@ -1,57 +1,24 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
-// import FixedMenu from "./FixedMenu";
 import MasterHead from "./MasterHead";
 import Footpage from "./Footpage";
 import Expertise from "./Expertise";
 import Timeline from "./Timeline";
+import Others from "./Others";
 import AboutMe from "./AboutMe";
-import ScrollAnimation from "react-animate-on-scroll";
+import AnimateScrolling from "./AnimateScrolling"
 
 const App = () => {
     return (
-        <div className="ui">
+        <div className="ui" style={{backgroundColor:"#111"}}>
             <div className="ui ">
                 <MasterHead />
             </div>
 
-            <div
-                className="ui vertical stripe segment"
-                style={{ padding: "7%" }}
-            >
-                <ScrollAnimation animateIn="fadeIn">
-                    <AboutMe />
-                </ScrollAnimation>
-            </div>
-
-            <div
-                className="ui vertical stripe segment"
-                style={{ padding: "7%" }}
-            >
-                <ScrollAnimation animateIn="fadeInLeft">
-                    <h1 className="ui header">Expertise</h1>
-                    <Expertise />
-                </ScrollAnimation>
-            </div>
-
-            <div
-                className="ui vertical stripe segment"
-                style={{ padding: "7%" }}
-            >
-                <ScrollAnimation animateIn="fadeInRight">
-                    <h1 className="ui header">Timeline</h1>
-                    <Timeline />
-                </ScrollAnimation>
-            </div>
-
-            <div
-                className="ui vertical stripe segment"
-                style={{ padding: "7%" }}
-            >
-                <ScrollAnimation animateIn="fadeInLeft">
-                    <h1 className="ui header">Projects</h1>
-                    <Expertise />
-                </ScrollAnimation>
-            </div>
+            <AnimateScrolling comp={<AboutMe/>} animation="fadeIn"/>
+            <AnimateScrolling comp={<Expertise />} animation="fadeInLeft" subsectionTitle="EXPERTISE"/>
+            <AnimateScrolling comp={<Timeline />} animation="fadeInRight" subsectionTitle="TIMELINE"/>
+            <AnimateScrolling comp={<Others />} animation="fadeInLeft" subsectionTitle="OTHERS"/>
 
             <Footpage />
         </div>

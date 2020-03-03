@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Slider from "./Slider"
+import ControlledCarousel from "./ControlledCarousel"
 import Header from "./Header";
 
 export default class MasterHead extends Component {
@@ -7,7 +7,7 @@ export default class MasterHead extends Component {
         return (
             <div className="ui inverted vertical masthead center aligned segment">
                 <Header />
-                <Slider />
+                <ControlledCarousel />
             </div>
         );
     }

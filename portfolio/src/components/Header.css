@@ -1,0 +1,11 @@
+@media (min-width: 0px) and (max-width: 1000px)  {
+    .icons-group{
+        display: none;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 3200px) {
+    .icons-group{
+        display: block;
+    }
+}
